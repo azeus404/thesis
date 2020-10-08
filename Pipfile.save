@@ -1,0 +1,26 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+matplotlib = "*"
+sklearn = "*"
+seaborn = "*"
+statsmodel-api = "*"
+tatsmodels-api = "*"
+statsmodels = "*"
+scipy = "*"
+numpy = "*"
+pandas = "*"
+jupyterlab = "*"
+fuzzywuzzy = {extras = ["speedup"],version = "*"}
+keras = "*"
+tensorflow = "*"
+opencv-python = "*"
+yellowbrick = "*"
+
+[requires]
+python_version = "3.6"
