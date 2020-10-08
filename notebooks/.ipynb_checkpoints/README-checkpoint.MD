@@ -3,7 +3,7 @@ INSPIRED BY https://lasca.ic.unicamp.br/paulo/papers/2017-ICMLA-edmar.rezende-ma
 We aim to achieve a high accuracy and low false postive classier of Windows ransomware files. 
 By using minimal samples (low resources) and deep neural Networks.
 
-# How can Deep Learning be used to detect & identify ransomware for the Microsoft Windows platform?
+# How can Deep Learning be used to detect & identify ransomware for the Microsoft Windows operating system?
 
 To answer the main central research question, two theoretical and an empirical sub-question have been formulated:
 
@@ -19,24 +19,7 @@ To answer the main central research question, two theoretical and an empirical s
 replacing the last 1000 fully-connected softmax layer by a 8 fully-connected softmax layer and transferring the parameters of architecture convolutional layers to the convolutional layers of the DCNN models;
 4) Freeze the transferred convolutional layer’s parameters and train the DCNN model to classify each sample into its ransomware family. An overview of the entire method’s pipeline is given in figure x.
 
-
 # Method
 In our method, we use MobileNet as the base model, pretrained for object detection task on the ImageNet dataset [10].
-Our hypothesis is that despite the disparity between natural images and malware byteplot images, MobileNet comprehensively trained on the ImageNet may still be transferred to
-make ransomware image recognition tasks more effective, since collecting and annotating large numbers of samples still poses significant challenges.
-
-## Models
-
-Traditional models:
-- VGG16
-- VGG19
-- ResNet
-
-Modern models:
-- InceptionV3
-- Xception
-- MobileNetV2
-https://machinethink.net/blog/mobilenet-v2/
-
-# Conclusions
+Our hypothesis is that despite the disparity between natural images and ransomware byteplot images, MobileNet comprehensively trained on the ImageNet may still be transferred to make ransomware image recognition tasks more effective, since collecting and annotating large numbers of samples still poses significant challenges.
 
