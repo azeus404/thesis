@@ -31,14 +31,19 @@ Please consult https://pypi.org/project/pipenv/ how to use. \
 
 ## Parsing and prepocessing
 Before using the 'proposed_approach.ipynb' in the notebooks folder (used in chapter 4 of the thesis) use the (pre-)processing scripts in the preprocessing folder. \
+
+
+The dataset must contain a: interim, processed and preprocessed folder. \
+
 This is a list of all scripts used in order of use:
 1) parse.py
-2) binar2image.py - on the iterim folder
+2) binar2image.py - on the interim folder
 3) imagesize.py (see https://github.com/ncarkaci/binary-to-image)
 4) preprocess.py distribute - distributes data to folders
 5) process.py - generates trainset.plk and testset.plk
 
-To collect the samples from the a Windows 10 Operating system use the script as provided in the windows folder.
+To collect the samples from the a Windows 10 Operating system use the script as provided in the windows folder. The SHA1 hash of the used Windows 10 image file used is: \
+6309664dc8aa8a2f5699abeb47b12d0c6368a66f  Win10_2004_EnglishInternational_x32.iso
 
 ## Expertiment
 Run the experiment by using the files in de 'compare-dnn' folder
