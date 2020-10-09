@@ -8,7 +8,7 @@ By using minimal samples (low resources) and deep neural Networks.
 
 ## How can Deep Learning be used to detect & identify ransomware for the Microsoft Windows operating system?
 
-To answer the main central research question, two theoretical and an empirical sub-question have been formulated:
+To answer the main research question, two theoretical and an empirical sub-question have been formulated:
 
 1.	What are the current methods for detecting & identifying ransomware?
 2.	What is Deep Learning & Deep Transfer Learning?
