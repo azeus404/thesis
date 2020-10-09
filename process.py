@@ -16,8 +16,6 @@ logfile = 'processlog.log'
 
 logging.basicConfig(filename=logfile,level=logging.INFO, format="%(asctime)s - %(message)s")
 
-
-
 parser = argparse.ArgumentParser(description='Functions to process')
 
 parser.add_argument('action',
@@ -41,8 +39,6 @@ def select_stratified_test_samples(data,datasetname="vtdataset"):
         strat_train_set = selection.iloc[train_index]
         strat_test_set = selection.iloc[test_index]
     return (strat_test_set.to_pickle("./testset_grayscale.pkl"), strat_train_set.to_pickle("./trainset_grayscale.pkl"))
-    #return (strat_test_set.to_pickle("./testset.pkl"), strat_train_set.to_pickle("./trainset.pkl"))
-
 
 def distibute_traindata(data, processed_path="/home/labuser/deeplearning/thesis/datasets/preprocessed/gray",train_path="/home/labuser/deeplearning/thesis/datasets/processed/train/gray"):
         """
