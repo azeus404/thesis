@@ -54,7 +54,7 @@ The 'evaluate_models.ipynb' notebook in notebooks folder is used to evualuate th
 Use the 'expertimental_results.ipynb' (Chapter 5 of the thesis) in the notebooks folder.
 
 ## Conclusions 
-- Current methodes for detecting ransomware and malware in general are: static, image based and dynamic analisys, resulting in file hashes.
+- Current methodes for detecting and indentifing ransomware and malware in general are based on static, image based and dynamic analysis techniques.
 - It is possible to apply deeptranferlearning on a CNN.
 - The MobileNet (V1 and V2) CNN's score a above 90% accuracy on a dataset of Windows PE files.
 
