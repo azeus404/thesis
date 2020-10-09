@@ -13,15 +13,15 @@ To answer the main central research question, two theoretical and an empirical s
 3.	How can a pre-trained model be implemented for detecting & identifying ransomware?
 
 ## The proposed method consists of the following basic steps: 
-1) Given a dataset of labeled ransomware executables, convert each sample to its respective byteplot grayscale image; 
-2) Convert each byteplot to an RGB image, rescaling it to 224 × 224 dimension and subtracting the mean RGB value computed on the ImageNet dataset from each pixel, as proposed by Krizhevsky et al. [9], to feed it to the deep neural network; 
+1) Given a dataset of labeled ransomware executables, convert each sample to its respective byteplot RGB image; 
+2) Reshape and resize it to a 112 × 112 dimension and subtracting the mean RGB value from each pixel and to feed it to the deep neural network; 
 3) Build a deep convolutional neural network (DCNN) based on the different architectures, 
 replacing the last 1000 fully-connected softmax layer by a 8 fully-connected softmax layer and transferring the parameters of architecture convolutional layers to the convolutional layers of the DCNN models;
-4) Freeze the transferred convolutional layer’s parameters and train the DCNN model to classify each sample into its ransomware family. An overview of the entire method’s pipeline is given in figure x.
+4) Freeze the transferred convolutional layer’s parameters and train the DCNN model to classify each sample into its ransomware family.
 
 
 # Setup 
-We use diffrent virtual environments (pipevn) to import and configure the necessary software libaries.
+We use virtual environments (pipevn) to import and configure the necessary software libaries.
 Please consult https://pypi.org/project/pipenv/ how to use.
 
 # Parsing and prepocessing
