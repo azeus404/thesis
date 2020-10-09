@@ -23,7 +23,7 @@ To answer the main central research question, two theoretical and an empirical s
 
 
 ## Setup 
-We use python virtual environments (pipevn) to import and configure the necessary software libaries. \
+We use python virtual environments (pipevn) to import and configure the necessary software libraries. \
 To create an environment run: \
 pipenv install -r requirements.txt \
 Please consult https://pypi.org/project/pipenv/ how to use. \
