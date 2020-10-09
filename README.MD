@@ -29,7 +29,7 @@ pipenv install -r requirements.txt \
 Please consult https://pypi.org/project/pipenv/ how to use. \
 
 
-## Parsing and prepocessing
+## Parsing, prepocessing and processing
 Before using the 'proposed_approach.ipynb' in the notebooks folder (used in chapter 4 of the thesis) use the (pre-)processing scripts in the preprocessing folder. \
 
 
