@@ -1,10 +1,12 @@
 Updated 09-10-2020
 
-# Aim and objectives
+# Ransomware Detection & Identification Using AI
+
+## Aim and objectives
 We aim to achieve a high accuracy and low false postive classier of Windows ransomware files. 
 By using minimal samples (low resources) and deep neural Networks.
 
-# How can Deep Learning be used to detect & identify ransomware for the Microsoft Windows operating system?
+## How can Deep Learning be used to detect & identify ransomware for the Microsoft Windows operating system?
 
 To answer the main central research question, two theoretical and an empirical sub-question have been formulated:
 
@@ -20,29 +22,34 @@ To answer the main central research question, two theoretical and an empirical s
 5) Freeze the transferred convolutional layer’s parameters and train the DCNN model to classify each sample into its ransomware family.
 
 
-# Setup 
-We use virtual environments (pipevn) to import and configure the necessary software libaries.
-To create an environment run:
-pipenv install -r requirements.txt
-Please consult https://pypi.org/project/pipenv/ how to use.
+## Setup 
+We use python virtual environments (pipevn) to import and configure the necessary software libaries. \
+To create an environment run: \
+pipenv install -r requirements.txt \
+Please consult https://pypi.org/project/pipenv/ how to use. \
 
 
-# Parsing and prepocessing
-Before using the 'proposed_approach.ipynb' in the notebooks folder (used in chapter 4 of the thesis) use the (pre-)processing scripts in the preprocessing folder.
-This is a list of all scripts used in oder of use:
-1 - parse.py
-2 - binar2image.py (to iterm folder)
-3 - imagesize.py 
-4 - preprocess.py distribute
-5 - process.py generates trainset.plk and testset.plk
+## Parsing and prepocessing
+Before using the 'proposed_approach.ipynb' in the notebooks folder (used in chapter 4 of the thesis) use the (pre-)processing scripts in the preprocessing folder. \
+This is a list of all scripts used in order of use:
+1) parse.py
+2) binar2image.py (to iterm folder)
+3) imagesize.py (see https://github.com/ncarkaci/binary-to-image)
+4) preprocess.py distribute
+5) process.py generates trainset.plk and testset.plk
 
 To collect the samples from the a Windows 10 Operating system use the script as provided in the windows folder.
 
 ## Expertiment
-Run the experiment by using the files in de compare-dnn folder
-reset the folderpaths in the scripts to match the new environment and execut the runner.sh script 
+Run the experiment by using the files in de 'compare-dnn' folder
+reset the folderpaths in the scripts to match the new environment and execut the runner.sh script. \
 The 'evaluate_models.ipynb' notebook in notebooks folder is used to evualuate the models performance during training, validation and testing.
 
 ## Experimental results
 Use the 'expertimental_results.ipynb' (Chapter 5 of the thesis) in the notebooks folder.
+
+## Conclusions 
+- Current methodes for detecting ransomware and malware in general are: static and dynamic analisys, resulting in file hashes.
+- It is possible to apply deeptranferlearning on a CNN.
+- The MobileNet (V1 and V2) CNN's score a above 90% accuracy on a dataset of Windows PE files.
 
