@@ -33,10 +33,10 @@ Please consult https://pypi.org/project/pipenv/ how to use. \
 Before using the 'proposed_approach.ipynb' in the notebooks folder (used in chapter 4 of the thesis) use the (pre-)processing scripts in the preprocessing folder. \
 This is a list of all scripts used in order of use:
 1) parse.py
-2) binar2image.py (to iterm folder)
+2) binar2image.py - on the iterim folder
 3) imagesize.py (see https://github.com/ncarkaci/binary-to-image)
-4) preprocess.py distribute
-5) process.py generates trainset.plk and testset.plk
+4) preprocess.py distribute - distributes data to folders
+5) process.py - generates trainset.plk and testset.plk
 
 To collect the samples from the a Windows 10 Operating system use the script as provided in the windows folder.
 
@@ -49,7 +49,7 @@ The 'evaluate_models.ipynb' notebook in notebooks folder is used to evualuate th
 Use the 'expertimental_results.ipynb' (Chapter 5 of the thesis) in the notebooks folder.
 
 ## Conclusions 
-- Current methodes for detecting ransomware and malware in general are: static and dynamic analisys, resulting in file hashes.
+- Current methodes for detecting ransomware and malware in general are: static, image based and dynamic analisys, resulting in file hashes.
 - It is possible to apply deeptranferlearning on a CNN.
 - The MobileNet (V1 and V2) CNN's score a above 90% accuracy on a dataset of Windows PE files.
 
