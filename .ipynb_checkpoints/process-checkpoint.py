@@ -35,14 +35,16 @@ def select_stratified_test_samples(data,datasetname="vtdataset"):
     preselection = data[(data ['imagesize_w'] >= 112) & (data['imagesize_h'] >= 112)]
     selection = preselection.groupby('label').filter(lambda x: len(x) >= 100)
 
+
     split = StratifiedShuffleSplit(n_splits=1, test_size=0.1, random_state=42)
     for train_index , test_index in split.split(selection, selection['label']):
         strat_train_set = selection.iloc[train_index]
         strat_test_set = selection.iloc[test_index]
-    return (strat_test_set.to_pickle("./testset.pkl"), strat_train_set.to_pickle("./trainset.pkl"))
+    return (strat_test_set.to_pickle("./testset_grayscale.pkl"), strat_train_set.to_pickle("./trainset_grayscale.pkl"))
+    #return (strat_test_set.to_pickle("./testset.pkl"), strat_train_set.to_pickle("./trainset.pkl"))
 
 
-def distibute_traindata(data, processed_path="/home/labuser/deeplearning/thesis/datasets/preprocessed",train_path="/home/labuser/deeplearning/thesis/datasets/processed/train"):
+def distibute_traindata(data, processed_path="/home/labuser/deeplearning/thesis/datasets/preprocessed/gray",train_path="/home/labuser/deeplearning/thesis/datasets/processed/train/gray"):
         """
         Copy ransomware image samples from preprocessed to processed folder
         """
@@ -63,7 +65,7 @@ def distibute_traindata(data, processed_path="/home/labuser/deeplearning/thesis/
                 logging.error("Exception occurred", exc_info=True)
 
 
-def distibute_testdata(data, processed_path="/home/labuser/deeplearning/thesis/datasets/preprocessed",test_path="/home/labuser/deeplearning/thesis/datasets/processed/test"):
+def distibute_testdata(data, processed_path="/home/labuser/deeplearning/thesis/datasets/preprocessed/gray",test_path="/home/labuser/deeplearning/thesis/datasets/processed/test/gray"):
         """
         Copy ransomware image samples from preprocessed to processed folder
         """
@@ -86,16 +88,19 @@ def distibute_testdata(data, processed_path="/home/labuser/deeplearning/thesis/d
 def main(input_action):
     if input_action == 'distribute':
         print("[*] Copy sample files to preprocessed location")
-        df = pd.read_pickle('/home/labuser/deeplearning/thesis/datamanagement/dataman/images_size.pkl')
+        #df = pd.read_pickle('/home/labuser/deeplearning/thesis/datamanagement/dataman/images_size_grayscale.pkl')
+        #df = pd.read_pickle('/home/labuser/deeplearning/thesis/datamanagement/dataman/images_size.pkl')
         #select_stratified_test_samples(df)
 
         print("[*] Copy sample files to processed location - train ")
-        df = pd.read_pickle('/home/labuser/deeplearning/thesis/datamanagement/dataman/trainset.pkl')
-        distibute_traindata(df)
+        #df = pd.read_pickle('/home/labuser/deeplearning/thesis/datamanagement/dataman/trainset.pkl')
+        #df = pd.read_pickle('/home/labuser/deeplearning/thesis/datamanagement/dataman/trainset_grayscale.pkl')
+        #distibute_traindata(df)
 
         print("[*] Copy sample files to processed location - test ")
-        df = pd.read_pickle('/home/labuser/deeplearning/thesis/datamanagement/dataman/testset.pkl')
-        distibute_testdata(df)
+        #df = pd.read_pickle('/home/labuser/deeplearning/thesis/datamanagement/dataman/testset.pkl')
+        #df = pd.read_pickle('/home/labuser/deeplearning/thesis/datamanagement/dataman/testset_grayscale.pkl')
+        #distibute_testdata(df)
 
 
     else:
