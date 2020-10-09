@@ -9,7 +9,7 @@ from sklearn.model_selection import StratifiedShuffleSplit
 import logging
 
 """
-Updated clean to label 19-08-2020
+Updated to clean labels 19-08-2020
 """
 
 logfile = 'processlog.log'

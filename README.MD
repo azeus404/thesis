@@ -26,7 +26,7 @@ We use diffrent virtual environments (pipevn) to import and configure the necess
 Please consult https://pypi.org/project/pipenv/ how to use.
 
 # Parsing and prepocessing
-Before using the proposed_approach.ipynb in the notebooks folder (used in chapter 4 of the thesis) use the (pre-)processing scripts.
+Before using the proposed_approach.ipynb in the notebooks folder (used in chapter 4 of the thesis) use the (pre-)processing scripts in the preprocessing folder.
 This is a list of all scripts used in oder of use:
 1 - parse.py
 2 - binar2image.py (to iterm folder)
