@@ -8,8 +8,8 @@ def image_size(path):
     return im.size
 
 def fileList(source):
-    """ 
-        find images in preprocessd folder and report on image size 
+    """
+        find images in preprocessd folder and report on image size and file size in bytes
     """
     matches = []
     for root, dirnames, filenames in os.walk(source):
@@ -23,7 +23,7 @@ def fileList(source):
                         label = filepath.split('/')[-2]
                         print(label)
                         filesize = os.stat(filepath).st_size
-                        matches.append({"path": filepath,'label': label , "imagesize_w":w,'imagesize_h':h,'filesize':filesize})
+                        matches.append({'path': filepath,'label': label , "imagesize_w":w,'imagesize_h':h,'filesize':filesize})
                     except Exception as e:
                         logging.error("Exception occurred on file %s " % filepath)
                         pass
@@ -31,9 +31,5 @@ def fileList(source):
 
 data = fileList('/home/labuser/deeplearning/thesis/datasets/interim')
 df = pd.DataFrame.from_dict(data)
-df.to_pickle('/home/labuser/deeplearning/thesis/datamanagement/dataman/images_size.pkl')
-
-
-def remove_smal_images(files):
-    df[(df['imagesize_w'] < ) & (df['imagesize_h'] < 224)]# deze moeten verwijderd worden
-    os.remove()
+#df.to_pickle('/home/labuser/deeplearning/thesis/datamanagement/dataman/images_size.pkl')
+#df.to_pickle('/home/labuser/deeplearning/thesis/datamanagement/dataman/images_size_grayscale.pkl')

@@ -34,7 +34,7 @@ This is a list of all scripts used in oder of use:
 4 - preprocess.py distribute
 5 - process.py generates trainset.plk and testset.plk
 
-To collect the samples from the a Windows10 Operating system use the script as provided in the windows folder.
+To collect the samples from the a Windows 10 Operating system use the script as provided in the windows folder.
 
 ## Expertiment
 The experiment can be re runed by using the files in de compare-dnn folder

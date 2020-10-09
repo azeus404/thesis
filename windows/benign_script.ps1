@@ -1,4 +1,4 @@
-﻿$a = Get-Content C:\temp\benign.txt
+$a = Get-Content C:\temp\benign.txt
 
 foreach( $i in $a) 
 {

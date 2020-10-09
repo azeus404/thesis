@@ -23,7 +23,7 @@ def fileList(source):
                         label = filepath.split('/')[-2]
                         print(label)
                         filesize = os.stat(filepath).st_size
-                        matches.append({"path": filepath,'label': label , "imagesize_w":w,'imagesize_h':h,'filesize':filesize})
+                        matches.append({'path': filepath,'label': label , "imagesize_w":w,'imagesize_h':h,'filesize':filesize})
                     except Exception as e:
                         logging.error("Exception occurred on file %s " % filepath)
                         pass
