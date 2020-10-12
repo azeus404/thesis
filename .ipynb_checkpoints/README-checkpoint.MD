@@ -20,11 +20,13 @@ To answer the main research question, two theoretical and an empirical sub-quest
 3) Build a deep convolutional neural network (DCNN) based on the different architectures, 
 4) We fine tune the DCNN: 
 - replacing the last 1000 fully-connected softmax layer by a 8 fully-connected softmax layer as classifier;
-- adding dense layer with 1024 neurons relu later for feature extraction;
+- adding global for feature extraction;
+- adding dense layer with 1024 neurons relu layer for feature extraction;
 - transferring the parameters of architecture convolutional layers to the convolutional layers of the DCNN models;
 5) Freeze the transferred convolutional layer’s parameters and train the DCNN model to classify each sample into its ransomware family.
 
-An overview of the apporach
+An overview of the approach is shown below.
+
 ![title](notebooks/media/approach.png)
 
 ## Setup 
