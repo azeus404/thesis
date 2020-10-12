@@ -47,12 +47,12 @@ This is a list of all scripts used in order of use:
 4) preprocess.py distribute - distributes data to folders
 5) process.py - generates trainset.plk and testset.plk
 
-To collect the samples from the a Windows 10 Operating system use the script as provided in the windows folder. The SHA1 hash of the used Windows 10 image file used is: \
+To collect the samples from the a Windows 10 Operating system use the script as provided in the windows folder. The SHA1 hash of the Windows 10 image file used is listed below: \
 6309664dc8aa8a2f5699abeb47b12d0c6368a66f  Win10_2004_EnglishInternational_x32.iso
 
 ## Experiment
 Run the experiment by using the files in de 'compare-dnn' folder
-reset the folderpaths in the scripts to match the new environment and execut the runner.sh script. \
+reset the folderpaths in the scripts to match the new environment and execut the runner.sh script. 
 The 'evaluate_models.ipynb' notebook in notebooks folder is used to evualuate the models performance during training, validation and testing.
 
 ## Experimental results
