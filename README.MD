@@ -3,8 +3,8 @@ Updated 09-10-2020
 # Ransomware Detection & Identification Using AI
 
 ## Aim and objectives
-We aim to achieve a high accuracy and low false postive classier of Windows ransomware files. 
-By using minimal samples (low resources) and deep neural Networks.
+The purpose of this research is (1) to contribute to the existing knowledge in the field of identifying unknown ransomware using AI and (2) proposing a practical application of a model that can be used by malware analysts when detecting and initially identifying ransomware. 
+We aim to get a high accuracy and a low false positive rate on identifying and classifying a given sample into a known ransomware family.
 
 ## How can Deep Learning be used to detect & identify ransomware for the Microsoft Windows operating system?
 
@@ -18,27 +18,30 @@ To answer the main research question, two theoretical and an empirical sub-quest
 1) Given a dataset of labeled ransomware executables, convert each sample to its respective byteplot RGB image; 
 2) Reshape and resize it to a 112 × 112 dimension and subtracting the mean RGB value from each pixel and to feed it to the deep neural network; 
 3) Build a deep convolutional neural network (DCNN) based on the different architectures, 
-4) Replacing the last 1000 fully-connected softmax layer by a 8 fully-connected softmax layer and transferring the parameters of architecture convolutional layers to the convolutional layers of the DCNN models;
+4) We fine tune the DCNN: 
+- replacing the last 1000 fully-connected softmax layer by a 8 fully-connected softmax layer as classifier;
+- adding dense layer with 1024 neurons relu later for feature extraction;
+- transferring the parameters of architecture convolutional layers to the convolutional layers of the DCNN models;
 5) Freeze the transferred convolutional layer’s parameters and train the DCNN model to classify each sample into its ransomware family.
 
+An overview of the apporach
+![title](notebooks/media/approach.png)
 
 ## Setup 
 We use python virtual environments (pipevn) to import and configure the necessary software libraries. \
 To create an environment run: \
 pipenv install -r requirements.txt \
-Please consult https://pypi.org/project/pipenv/ how to use. \
-
+Please consult https://pypi.org/project/pipenv/ how to use. 
 
 ## Parsing, prepocessing and processing
 Before using the 'proposed_approach.ipynb' in the notebooks folder (used in chapter 4 of the thesis) use the (pre-)processing scripts in the preprocessing folder. \
 
-
-The dataset must contain a: interim, processed and preprocessed folder. \
+The dataset must contain a: interim, processed and preprocessed folder. 
 
 This is a list of all scripts used in order of use:
 1) parse.py
-2) binar2image.py - on the interim folder
-3) imagesize.py (see https://github.com/ncarkaci/binary-to-image)
+2) binar2image.py - on the interim folder (see https://github.com/ncarkaci/binary-to-image)
+3) imagesize.py - calculate image sizes by converterd binaries
 4) preprocess.py distribute - distributes data to folders
 5) process.py - generates trainset.plk and testset.plk
 
@@ -55,6 +58,6 @@ Use the 'expertimental_results.ipynb' (Chapter 5 of the thesis) in the notebooks
 
 ## Conclusions 
 - Current methodes for detecting and indentifing ransomware and malware in general are based on static, image based and dynamic analysis techniques.
-- It is possible to apply deeptranferlearning on a CNN.
+- It is possible to apply deep transfer learning e.g. pre-trained CNN's.
 - The MobileNet (V1 and V2) CNN's score a above 90% accuracy on a dataset of Windows PE files.
 
