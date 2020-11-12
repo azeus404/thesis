@@ -1,5 +1,22 @@
 # Ransomware Detection & Identification Using AI
 Updated 12-11-2020
+
+# Abstract
+
+Malware is a constantly evolving and rising threat, especially ransomware, a form of malware. The rise of ransomware as a service platform adds to this surge, and malware researchers need options to swiftly and reliably identify a family of ransomware to protect the data of individuals and vital infrastructures.
+
+In this study we provide an image-based detection and classification method that can aid researchers in identifying the origins of ransomware by comparing it to known ransomware families. We aimed to reach a high level of accuracy and a low false positive rate on a given ransomware sample using a limited-size training dataset and COTS hardware.
+
+We used a dataset of 347,307 Windows executable malware samples obtained from VirusTotal (VT). These samples were collected by VT between 2017 and 2020. From this dataset we selected samples positively identified as known ransomware.
+
+We applied a novel AI-driven approach to classify ransomware based on an image representation of the binary file. This approach has been used by security practitioners and academics on malware in general but not on particular types of malware like ransomware.
+
+We used a naïve approach to selecting the best-performing convolutional neural networks based on 16 of the available applications in Keras, a Python API for the TensorFlow opensource machine learning platform. These applications were pre-trained on the ImageNet dataset of natural images.
+
+The proposed method achieves above 90% accuracy and a high recall rate for a high probability of detection of ransomware based on three channel (RGB) images. The best-scoring models on our dataset were MobileNet and MobileNetV2.
+
+# Ransomware Detection & Identification Using AI
+
 ## Aim and objectives
 The purpose of this research is to (1) contribute to existing knowledge in the field of identifying unknown ransomware using AI and (2) propose a practical model that can be used by malware analysts when detecting and initially identifying ransomware. We aim to achieve a high level of accuracy and a low false positive rate in identifying ransomware and classifying a given sample into a known ransomware family.
 
@@ -63,6 +80,8 @@ Use the 'expertimental_results.ipynb' (Chapter 6 of the thesis) in the notebooks
 
 ## Prototype detector
 As described in Appendix 3 we provided a working implementation of the MobileNetV1 and MobileNetV2 models in a detector. The script can be found in the 'detector' folder of this repository.
-
+The detector can be used running the commands listed below:
+python detector.py -m MobileNetV1 testimage.png
+python detector.py -m MobileNetV2 testimage.png
 ## Acknowledgements
 We gratefully acknowledge the support of [VirusTotal](https://www.virustotal.com)for providing the malware samples used in this research.
