@@ -79,9 +79,9 @@ Use the 'expertimental_results.ipynb' (Chapter 6 of the thesis) in the notebooks
 - The MobileNet (V1 and V2) CNN's score an above 90% accuracy on a dataset of Windows PE files.
 
 ## Prototype detector
-As described in Appendix 3 we provided a working implementation of the MobileNetV1 and MobileNetV2 models in a detector. The script can be found in the 'detector' folder of this repository.
+As described in Appendix 3 we provided a working implementation of the MobileNet(V1) and MobileNetV2 models in a detector. The script can be found in the 'detector' folder of this repository.
 The detector can be used running the commands listed below:
-python detector.py -m MobileNetV1 testimage.png
+python detector.py -m MobileNet testimage.png
 python detector.py -m MobileNetV2 testimage.png
 ## Acknowledgements
 We gratefully acknowledge the support of [VirusTotal](https://www.virustotal.com)for providing the malware samples used in this research.
