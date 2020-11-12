@@ -1,16 +1,17 @@
 # Ransomware Detection & Identification Using AI
-Updated 12-10-2020
+Updated 12-11-2020
 ## Aim and objectives
-The purpose of this research is (1) to contribute to the existing knowledge in the field of identifying unknown ransomware using AI and (2) proposing a practical application of a model that can be used by malware analysts when detecting and initially identifying ransomware.
-We aim to get a high accuracy and a low false positive rate on identifying and classifying a given sample into a known ransomware family.
+The purpose of this research is to (1) contribute to existing knowledge in the field of identifying unknown ransomware using AI and (2) propose a practical model that can be used by malware analysts when detecting and initially identifying ransomware. We aim to achieve a high level of accuracy and a low false positive rate in identifying ransomware and classifying a given sample into a known ransomware family.
 
-## How can Deep Learning be used to detect & identify ransomware for the Microsoft Windows operating system?
+## How can deep learning be used to detect and identify ransomware?
 
 To answer the main research question, two theoretical and an empirical sub-question have been formulated:
 
-1.	What are the current methods for detecting & identifying ransomware?
-2.	What is Deep Learning & Deep Transfer Learning?
-3.	How can a pre-trained model be implemented for detecting & identifying ransomware?
+1.	What are the current methods for detecting and identifying ransomware?
+2.	What is deep learning and deep transfer learning?
+3. a.	How can a pre-trained model be implemented for detecting and identifying ransomware?
+   b.	How effective is this implemented model?
+
 
 ## The proposed method consists of the following basic steps:
 1) Given a dataset of labeled ransomware Windows executables, convert each sample to its respective byteplot RGB image;
@@ -49,14 +50,19 @@ To collect the samples from the a Windows 10 Operating system use the script as 
 6309664dc8aa8a2f5699abeb47b12d0c6368a66f  Win10_2004_EnglishInternational_x32.iso
 
 ## Experiment
-Run the experiment by using the files in de 'compare-dnn' folder
-reset the folder paths in the scripts to match the new environment and execute the runner.sh script.
+Run the experiment by using the files in de 'compare-dnn' folder and reset the folder paths in the scripts to match the new environment and execute the runner.sh script.
 The 'evaluate_models.ipynb' notebook in notebooks folder is used to evaluate the models performance during training, validation and testing.
 
 ## Experimental results
-Use the 'expertimental_results.ipynb' (Chapter 5 of the thesis) in the notebooks folder.
+Use the 'expertimental_results.ipynb' (Chapter 6 of the thesis) in the notebooks folder.
 
 ## Conclusions
 - Current methodes for detecting and identifying ransomware and malware in general are based on static, image based and dynamic analysis techniques.
 - It is possible to apply deep transfer learning e.g. pre-trained CNN's.
-- The MobileNet (V1 and V2) CNN's score a above 90% accuracy on a dataset of Windows PE files.
+- The MobileNet (V1 and V2) CNN's score an above 90% accuracy on a dataset of Windows PE files.
+
+## Prototype detector
+As described in Appendix 3 we provided a working implementation of the MobileNetV1 and MobileNetV2 models in a detector. The script can be found in the 'detector' folder of this repository.
+
+## Acknowledgements
+We gratefully acknowledge the support of [VirusTotal](https://www.virustotal.com)for providing the malware samples used in this research.
